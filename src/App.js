@@ -80,6 +80,14 @@ export default function App() {
 		setForm((prev) => prev.filter((item) => item !==prev[index]))
 
 	}
+
+	const submitFunc = () => {
+
+			form.map((item, index) => {
+				console.log(index, item.Username, item.Platform)
+			})
+
+	}
 	return (
 		<div className="container mt-5 py-5">
 			<div >
@@ -145,6 +153,7 @@ export default function App() {
 
 				<button className='btn btn-primary mt-2' onClick={handleAddLink}>Add a clink</button>
 			</form>
+			<button className="btn btn-danger" onClick={submitFunc}>Submit</button>
 		</div>
 		</div>
 
